@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bkqfsxcgsl8ky"]
+
+[ext_resource type="Texture2D" uid="uid://deatuf1b1ax2r" path="res://scenes/personaje/animations/2DPCT_Walk.png" id="1_wu2tu"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wu2tu")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
