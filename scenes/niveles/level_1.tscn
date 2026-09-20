@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://8wm5cgbdd0nw" path="res://scenes/mainscenes/border.tscn" id="2_5xbjy"]
 [ext_resource type="TileSet" uid="uid://d17hpigxhnhvj" path="res://tilesets/basetilset.tres" id="3_4nkto"]
+[ext_resource type="PackedScene" uid="uid://olwurorakquv" path="res://scenes/personaje/character.tscn" id="3_i7rx1"]
 
 [node name="level1" type="Node2D" unique_id=1672453140]
 
@@ -9,3 +10,6 @@
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1318632292]
 tile_set = ExtResource("3_4nkto")
+
+[node name="CharacterBody2D" parent="." unique_id=1513522055 instance=ExtResource("3_i7rx1")]
+position = Vector2(95, 132)
