@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dkvcik0h0xopg"]
+
+[ext_resource type="Texture2D" uid="uid://djeys7k8lqwvc" path="res://roguelikeSheet_transparent.png" id="1_881mo"]
+[ext_resource type="Script" uid="uid://b3dvr88t32kpm" path="res://scenes/recolectables/monedas.gd" id="1_cpy3b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojbw0"]
+atlas = ExtResource("1_881mo")
+region = Rect2(901, 458, 16.058716, 16.53122)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r5iys"]
+radius = 4.1231055
+
+[node name="monedas" type="Node2D" unique_id=1954875127 node_paths=PackedStringArray("area_2d")]
+script = ExtResource("1_cpy3b")
+area_2d = NodePath("Area2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1154530554]
+texture = SubResource("AtlasTexture_ojbw0")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=443422647]
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1550709695]
+shape = SubResource("CircleShape2D_r5iys")

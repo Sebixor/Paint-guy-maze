@@ -1,15 +1,50 @@
-[gd_scene format=3 uid="uid://cicjgj62r4nbp"]
+[gd_scene format=4 uid="uid://cicjgj62r4nbp"]
 
+[ext_resource type="PackedScene" uid="uid://dkvcik0h0xopg" path="res://scenes/recolectables/monedas.tscn" id="1_puj6c"]
+[ext_resource type="PackedScene" uid="uid://qwjldp3d7c31" path="res://scenes/recolectables/contenedormonedas.tscn" id="1_qabiv"]
 [ext_resource type="PackedScene" uid="uid://8wm5cgbdd0nw" path="res://scenes/mainscenes/border.tscn" id="2_5xbjy"]
 [ext_resource type="TileSet" uid="uid://d17hpigxhnhvj" path="res://tilesets/basetilset.tres" id="3_4nkto"]
 [ext_resource type="PackedScene" uid="uid://olwurorakquv" path="res://scenes/personaje/character.tscn" id="3_i7rx1"]
+[ext_resource type="Texture2D" uid="uid://djeys7k8lqwvc" path="res://roguelikeSheet_transparent.png" id="6_yllob"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5iys"]
+atlas = ExtResource("6_yllob")
+region = Rect2(205, 1, 14, 15)
 
 [node name="level1" type="Node2D" unique_id=1672453140]
 
+[node name="contenedormonedas" parent="." unique_id=866666008 instance=ExtResource("1_qabiv")]
+
+[node name="monedas5" parent="contenedormonedas" unique_id=1954875127 instance=ExtResource("1_puj6c")]
+position = Vector2(342, 203)
+
+[node name="monedas4" parent="contenedormonedas" unique_id=1509830961 instance=ExtResource("1_puj6c")]
+position = Vector2(377, 57)
+
+[node name="monedas" parent="contenedormonedas" unique_id=247605959 instance=ExtResource("1_puj6c")]
+z_index = 5
+position = Vector2(27, 185)
+
+[node name="monedas2" parent="contenedormonedas" unique_id=1371431125 instance=ExtResource("1_puj6c")]
+position = Vector2(21, 23)
+
+[node name="monedas3" parent="contenedormonedas" unique_id=105680111 instance=ExtResource("1_puj6c")]
+position = Vector2(85, 57)
+
+[node name="monedas6" parent="contenedormonedas" unique_id=1166380423 instance=ExtResource("1_puj6c")]
+position = Vector2(453, 30)
+
 [node name="border" parent="." unique_id=456438859 instance=ExtResource("2_5xbjy")]
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1318632292]
+[node name="platforms" type="TileMapLayer" parent="." unique_id=1318632292]
+position = Vector2(0, -1)
+tile_map_data = PackedByteArray("AAABAAwAAwAFAAEAAAACAAwAAwAFAAEAAAADAAwAAwAFAAEAAAAEAAwAAwAFAAEAAAAFAAwAAwAFAAEAAAAGAAwAAwAFAAEAAAAHAAwAAwAFAAEAAAAKAAkAAwAFAAEAAAAKAAoAAwAFAAEAAAAKAAsAAwAFAAEAAAAKAAwAAwAFAAEAAAAKAA0AAwAFAAEAAAAKAA4AAwAFAAEAAAAKAA8AAwAFAAEAAAAJAAkAAwAfABkAAAAIAAkAAwAfABkAAAAHAAkAAwAfABkAAAAGAAkAAwAeABkAAAALAAkAAwAFAAEAAAAMAAkAAwAFAAEAAAANAAkAAwAFAAEAAAAOAAkAAwAFAAEAAAAPAAkAAwAFAAEAAAAPAA0AAwAFAAEAAAAQAA0AAwAFAAEAAAARAA0AAwAFAAEAAAASAA0AAwAFAAEAAAATAA0AAwAFAAEAAAAUAA0AAwAFAAEAAAAVAA0AAwAFAAEAAAAWAAoAAwAFAAEAAAAWAAsAAwAFAAEAAAAWAAwAAwAFAAEAAAAWAA0AAwAFAAEAAAATAAgAAwAFAAEAAAATAAkAAwAFAAEAAAATAAoAAwAFAAEAAAATAAsAAwAFAAEAAAATAAcAAwAFAAEAAAAUAAcAAwAFAAEAAAAVAAcAAwAFAAEAAAAWAAcAAwAFAAEAAAAXAAcAAwAFAAEAAAAYAAcAAwAFAAEAAAAZAAcAAwAFAAEAAAAZAAQAAwAFAAEAAAAZAAMAAwAFAAEAAAAZAAIAAwAFAAEAAAAZAAEAAwAFAAEAAAAYAAQAAwAFAAEAAAAXAAQAAwAFAAEAAAAWAAQAAwAFAAEAAAAVAAQAAwAFAAEAAAAUAAQAAwAFAAEAAAATAAQAAwAFAAEAAAASAAQAAwAFAAEAAAARAAQAAwAFAAEAAAASAAcAAwAFAAEAAAARAAcAAwAFAAEAAAAQAAcAAwAFAAEAAAAPAAcAAwAFAAEAAAAOAAcAAwAFAAEAAAANAAcAAwAFAAEAAAAMAAcAAwAFAAEAAAALAAcAAwAFAAEAAAAKAAcAAwAFAAEAAAAJAAcAAwAFAAEAAAAIAAcAAwAFAAEAAAAHAAcAAwAFAAEAAAAGAAcAAwAFAAEAAAAFAAcAAwAFAAEAAAAEAAcAAwAFAAEAAAADAAcAAwAFAAEAAAACAAcAAwAFAAEAAAABAAcAAwAFAAEAAAAOAAYAAwAFAAEAAAANAAYAAwAFAAEAAAAMAAYAAwAFAAEAAAALAAYAAwAFAAEAAAAKAAYAAwAFAAEAAAAJAAYAAwAFAAEAAAAIAAYAAwAFAAEAAAAHAAYAAwAFAAEAAAAGAAYAAwAFAAEAAAAFAAYAAwAFAAEAAAAEAAYAAwAFAAEAAAADAAYAAwAFAAEAAAACAAYAAwAFAAEAAAABAAYAAwAFAAEAAAAEAAQAAwAFAAEAAAAFAAQAAwAFAAEAAAAGAAQAAwAFAAEAAAAHAAQAAwAFAAEAAAAIAAQAAwAFAAEAAAAJAAQAAwAFAAEAAAAKAAQAAwAFAAEAAAALAAQAAwAFAAEAAAAMAAQAAwAFAAEAAAAEAAMAAwAFAAEAAAAEAAIAAwAFAAEAAAAEAAEAAwAFAAEAAAAJAA8AAwAWAAkAAAAIAA8AAwAWAAkAAAAbAA8AAwAWAAkAAAAcAA8AAwAWAAkAAAAaAA8AAwAWAAkAAAASAAwAAwAWAAkAAAARAAwAAwAWAAkAAAABAAUAAwAWAAkAAAA=")
 tile_set = ExtResource("3_4nkto")
 
 [node name="CharacterBody2D" parent="." unique_id=1513522055 instance=ExtResource("3_i7rx1")]
-position = Vector2(95, 132)
+position = Vector2(27, 238)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1513276943]
+z_index = 18
+position = Vector2(377, 57)
+texture = SubResource("AtlasTexture_r5iys")
